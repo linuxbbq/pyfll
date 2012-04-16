@@ -1,3 +1,6 @@
+Setup:
+  quilt push -a
+
 Usage:
   See ./fll --help
 
@@ -6,6 +9,7 @@ Example Usage:
   2) sudo ./fll -c ../fll.conf -b /tmp/fll/ -o /tmp/fll/
 
 Dependencies:
+  quilt
   ubuntu (>= 12.04)
   python (>= 2.5)
   python-apt
