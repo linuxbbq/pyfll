@@ -1,0 +1,4 @@
+* change default kernel package name in pyfll to match fll.conf format
+* test cdebootstrap
+* support booting multiple images
+* work out apt_cdrom stuff so it works as original? currently creating .disk/info on the cd root fixes the casper problem
