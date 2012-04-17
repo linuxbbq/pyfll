@@ -5,8 +5,9 @@ pyfll (12.04) UNRELEASED; urgency=low
   * remove leftover quilt cruft
   * add helper message on how to apply the ubuntu patches
   * remove dbw specific conf
+  * update quilt instructions to change default QUILT_PATCHES dir
 
- -- Bernard Gray <bernard.gray@gmail.com>  Tue, 17 Apr 2012 15:21:37 +1000
+ -- Bernard Gray <bernard.gray@gmail.com>  Tue, 17 Apr 2012 15:29:04 +1000
 
 pyfll (2011.02) imera; urgency=low
 

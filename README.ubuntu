@@ -1,4 +1,6 @@
 Setup:
+  export QUILT_PATCHES=debian/patches
+  (alternatively, add this variable to ~/.quiltrc)
   quilt push -a
 
 Usage:
