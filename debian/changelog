@@ -4,8 +4,9 @@ pyfll (12.04) UNRELEASED; urgency=low
   * initial commit for building 12.04 precise 
   * remove leftover quilt cruft
   * add helper message on how to apply the ubuntu patches
+  * remove dbw specific conf
 
- -- Bernard Gray <bernard.gray@gmail.com>  Mon, 16 Apr 2012 17:00:50 +1000
+ -- Bernard Gray <bernard.gray@gmail.com>  Tue, 17 Apr 2012 15:21:37 +1000
 
 pyfll (2011.02) imera; urgency=low
 
