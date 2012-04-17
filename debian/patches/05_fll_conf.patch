@@ -23,12 +23,14 @@
  	en_US
  	#es_ES
  	#fr_FR
-@@ -56,28 +56,40 @@
+@@ -55,29 +55,41 @@
+ #"""
  
  [ 'archs' ]
- 	#[[ 'i386' ]]
+-	#[[ 'i386' ]]
 -	#linux = aptosid-686
-+	#linux = generic
++	[[ 'i386' ]]
++	linux = generic
  
  	#[[ 'amd64' ]]
 -	#linux = aptosid-amd64
@@ -71,7 +73,7 @@
 +        [[ 'ubuntu-partner' ]]
 +        label            = ubuntu-partner
 +        uri              = http://archive.canonical.com/ubuntu/
-+        cached           = http://gulf:3142/archive.canonical.com/ubuntu/
++        cached           = 
 +        #cached          =
 +        suite            = precise
 +        components       = partner
