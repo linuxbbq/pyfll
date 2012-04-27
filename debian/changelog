@@ -7,8 +7,9 @@ pyfll (12.04) UNRELEASED; urgency=low
   * remove dbw specific conf
   * update quilt instructions to change default QUILT_PATCHES dir
   * remove more dbw specific cruft from fll.conf
+  * begin syncing our manifest with 12.04 final release
 
- -- Bernard Gray <bernard.gray@gmail.com>  Tue, 17 Apr 2012 15:31:05 +1000
+ -- Bernard Gray <bernard.gray@gmail.com>  Fri, 27 Apr 2012 11:52:31 +1000
 
 pyfll (2011.02) imera; urgency=low
 

@@ -17,7 +17,7 @@
 +
 --- /dev/null
 +++ b/packages/packages.d/unity
-@@ -0,0 +1,103 @@
+@@ -0,0 +1,109 @@
 +desc = """
 +	Ubuntu Unity desktop environment.
 +"""
@@ -25,9 +25,7 @@
 +packages = """
 +	unity
 +	unity-2d
-+	unity-2d-launcher
 +	unity-2d-panel
-+	unity-2d-places
 +	unity-2d-spread
 +	unity-asset-pool
 +	unity-common
@@ -35,9 +33,13 @@
 +	unity-lens-applications
 +	unity-lens-files
 +	unity-lens-music
++	unity-lens-video
 +	unity-scope-musicstores
++	unity-scope-video-remote
 +	unity-services
 +## desktop programs ##
++	activity-log-manager-control-center
++	aisleriot
 +	brasero
 +	brasero-cdrkit
 +	empathy
@@ -48,7 +50,7 @@
 +	firefox-locale-es
 +	firefox-locale-pt
 +	firefox-locale-zh-hans
-+	gnobots2
++	folks-common
 +	gnome-accessibility-themes
 +	gnome-bluetooth
 +	gnome-disk-utility
@@ -58,6 +60,7 @@
 +	gnome-screensaver
 +	gnome-sudoku
 +	gnome-user-guide
++	gnome-user-share
 +	gnomine
 +	gparted
 +	gwibber
@@ -65,6 +68,7 @@
 +	gwibber-service-facebook
 +	gwibber-service-identica
 +	gwibber-service-twitter
++	icc-profiles-free
 +	im-switch
 +	indicator-application
 +	indicator-appmenu
@@ -85,18 +89,21 @@
 +	python-appindicator
 +	python-gobject-cairo
 +	python-gst0.10
-+	python-indicate
-+	python-telepathy
 +	python-uno
 +	python-virtkey
 +	python-zeitgeist
++	remmina
++	remmina-plugin-rdp
++	remmina-plugin-vnc
 +	rhythmbox
++	rhythmbox-mozilla
 +	rhythmbox-plugin-cdrecorder
++	rhythmbox-plugin-magnatune
++	rhythmbox-plugin-zeitgeist
 +	rhythmbox-plugins
 +	sessioninstaller
 +	shotwell
 +	simple-scan
-+	telepathy-butterfly
 +	telepathy-gabble
 +	telepathy-haze
 +	telepathy-idle
@@ -113,7 +120,6 @@
 +	transmission-gtk
 +	usb-creator-common
 +	usb-creator-gtk
-+	vinagre
 +	vino
 +	xdg-utils
 +	xul-ext-ubufox
@@ -135,7 +141,7 @@
 +"""
 --- /dev/null
 +++ b/packages/packages.d/xserver-ubuntu
-@@ -0,0 +1,48 @@
+@@ -0,0 +1,44 @@
 +desc = """
 +	X Server packages.
 +"""
@@ -153,11 +159,7 @@
 +	libgl1-mesa-glx
 +	ttf-dejavu-core
 +	ttf-indic-fonts-core
-+	ttf-khmeros-core
-+	ttf-opensymbol
 +	ttf-punjabi-fonts
-+	ttf-takao-pgothic
-+	ttf-thai-tlwg
 +	ttf-ubuntu-font-family
 +	ttf-wqy-microhei
 +	xauth
@@ -186,7 +188,7 @@
 +"""
 --- /dev/null
 +++ b/packages/packages.d/utils-ubuntu
-@@ -0,0 +1,113 @@
+@@ -0,0 +1,149 @@
 +desc = """
 +	Misc. utilities
 +"""
@@ -218,7 +220,7 @@
 +	btrfs-tools
 +	bzip2
 +	cifs-utils
-+	cmap-adobe-japan1
++	cmap-adobe-japan2
 +	colord
 +	command-not-found
 +	cron
@@ -230,10 +232,11 @@
 +	enchant
 +	espeak
 +	evolution-data-server
-+	exiv2
 +	gcc
 +	gcc-4.6
 +	gdb
++	gtk2-engines
++	guile-1.8-libs
 +	ibus
 +	ibus-gtk
 +	ibus-gtk3
@@ -250,6 +253,37 @@
 +	jockey-gtk
 +	kbd
 +	kerneloops-daemon
++	libcairo-perl
++	libcanberra-gtk-module
++	libcanberra-gtk3-module
++	libcanberra-pulse
++	libcrypt-passwdmd5-perl
++	libfile-basedir-perl
++	libfile-desktopentry-perl
++	libfile-mimeinfo-perl
++	libfolks-eds25
++	libfribidi0
++	libgail-common
++	libgail18
++	libglib-perl
++	libgphoto2-l10n
++	libgpod-common
++	libgtk2-perl
++	libgtk2.0-bin
++	libgutenprint2
++	libjs-jquery
++	libmtp-runtime
++	libnss-mdns
++	libpam-cap
++	libpam-gnome-keyring
++	libpango-perl
++	libpaper-utils
++	libproxy1-plugin-gsettings
++	libproxy1-plugin-networkmanager
++	libpurple-bin
++	libqt4-sql-sqlite
++	libwmf0.2-7
++	libwmf0.2-7-gtk
 +	less
 +	logrotate
 +	manpages
@@ -259,25 +293,27 @@
 +	mobile-broadband-provider-info
 +	modemmanager
 +	mousetweaks
++	mscompress
 +	mtr-tiny
-+	mysql-common
 +	netbase
 +	netcat-openbsd
 +	ntpdate
 +	onboard
 +	protobuf-compiler
++	python-aptdaemon.pkcompat
 +	python-argparse
 +	python-crypto
 +	python-dateutil
-+	python-farsight
 +	python-libproxy
 +	python-mako
 +	python-markupsafe
++	python-packagekit
 +	python-pam
-+	python-papyon
-+	python-support
++	python-renderpm
++	python-reportlab-accel
++	qdbus
 +	qt-at-spi
-+	rdesktop
++	resolvconf
 +	rsync
 +	rsyslog
 +	rtkit
@@ -288,21 +324,23 @@
 +	sudo
 +	tcpd
 +	tcpdump
++	telnet
 +	ufw
-+	unionfs-fuse
 +	ureadahead
 +	wamerican
 +	wget
 +	wireless-tools
 +	wireless-regdb
 +	wpasupplicant
++	xml-core
++	xz-lzma
 +"""
 +
 +debconf = """
 +"""
 --- /dev/null
 +++ b/packages/packages.d/hwsupport-ubuntu
-@@ -0,0 +1,62 @@
+@@ -0,0 +1,65 @@
 +desc = """
 +	Packages that provide some kind of support for very common harware.
 +"""
@@ -315,20 +353,21 @@
 +	cups-bsd
 +	cups-client
 +	cups-common
-+	cups-driver-gutenprint
 +	cups-ppdc
 +	dmraid
-+	foo2zjs
 +	foomatic-db-engine
 +	ginn
 +	ghostscript-cups
-+	hpijs
++	gvfs-backends
++	gvfs-fuse
 +	hplip
-+	hplip-cups
 +	hplip-data
 +	hwdata
 +	irqbalance
 +	laptop-detect
++	libc-dev-bin
++	libc6-dev
++	linux-libc-dev
 +	network-manager
 +	network-manager-pptp
 +	pcmciautils
@@ -336,17 +375,20 @@
 +	pppconfig
 +	pppoeconf
 +	printer-driver-c2esp
-+	ptouch-driver
-+	pulseaudio-esound-compat
++	printer-driver-foo2zjs
++	printer-driver-gutenprint
++	printer-driver-hpijs
++	printer-driver-min12xxw
++	printer-driver-ptouch
++	printer-driver-pxljr
++	printer-driver-sag-gdi
++	printer-driver-splix
 +	pulseaudio-module-bluetooth
 +	pulseaudio-module-gconf
 +	pulseaudio-module-x11
 +	python-serial
-+	pxljr
 +	radeontool
-+	rastertosag-gdi
 +	sane-utils
-+	splix
 +	system-config-printer-udev
 +	toshset
 +	udev
@@ -354,7 +396,6 @@
 +	usb-modeswitch-data
 +	usbutils
 +	vbetool
-+	wireless-crda
 +	xfsprogs
 +"""
 +
@@ -402,7 +443,7 @@
 +:
 --- /dev/null
 +++ b/packages/packages.d/distro-ubuntu
-@@ -0,0 +1,43 @@
+@@ -0,0 +1,49 @@
 +desc = """
 +	Distro specific common packages.
 +"""
@@ -417,6 +458,11 @@
 +	example-content
 +	friendly-recovery
 +	geoclue-ubuntu-geoip
++	geoip-database
++	gir1.2-dbusmenu-gtk-0.4
++	gir1.2-gtk-2.0
++	gir1.2-gudev-1.0
++	gir1.2-launchpad-integration-3.0
 +	ubiquity
 +	ubiquity-casper
 +	ubiquity-frontend-gtk
@@ -430,15 +476,16 @@
 +	ubuntu-mono
 +	ubuntu-sounds
 +	ubuntu-sso-client
++	ubuntu-sso-client-gtk
 +	ubuntu-standard
 +	ubuntu-system-service
 +	ubuntu-wallpapers
 +	ubuntuone-client
 +	ubuntuone-client-gnome
 +	ubuntuone-control-panel
-+	ubuntuone-control-panel-gtk
 +	ubuntuone-couch
 +	ubuntuone-installer
++	whoopsie
 +"""
 +
 +i386 = """
@@ -478,7 +525,18 @@
 +	libreoffice-gtk
  	libreoffice-impress
  	libreoffice-math
++	libreoffice-style-tango
  	libreoffice-writer
  	#mythes-en-us
-+	openoffice.org-hyphenation
  """
+--- a/packages/packages.d/xserver
++++ b/packages/packages.d/xserver
+@@ -7,6 +7,8 @@
+ 	fontconfig
+ 	fontconfig-config
+ 	libgl1-mesa-dri
++	libvisual-0.4-plugins
++        libvncserver0
+ 	menu
+ 	mesa-utils
+ 	sux
