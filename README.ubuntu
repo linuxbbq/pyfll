@@ -13,6 +13,10 @@ Example Usage:
 Dependencies:
   quilt
   ubuntu (>= 12.04)
+    - note: 12.04 and 11.10 have this bug which causes a failure to build:
+        https://bugs.launchpad.net/ubuntu/+source/python-apt/+bug/984523
+    - it is possible to build on 11.04 but you need an updated debootstrap
+      package (>= 1.0.38) to add support for the precise release
   python (>= 2.5)
   python-apt
   python-configobj
