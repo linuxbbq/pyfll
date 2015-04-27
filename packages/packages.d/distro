@@ -7,10 +7,9 @@ debconf = """
 """
 
 packages = """
-	apt-conf-aptosid
-	aptosid-archive-keyring
-	aptosid-art-grub2
-	aptosid-scripts
-	udev-config-aptosid
+	apt-conf-siduction
+	siduction-archive-keyring
+	siduction-scripts
+	udev-config-siduction
 """
 
