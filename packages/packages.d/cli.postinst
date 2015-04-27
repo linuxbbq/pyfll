@@ -17,9 +17,9 @@ set pastetoggle=<F10>
 EOF
 	fi
 
-	if which most >/dev/null; then
-		say "Setting default pager to ${most}"
-		update-alternatives --set pager $(which most) >/dev/null
+	if which less >/dev/null; then
+		say "Setting default pager"
+		update-alternatives --set pager $(which less) >/dev/null
 	fi
 }
 
