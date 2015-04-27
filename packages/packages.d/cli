@@ -4,13 +4,13 @@ desc = """
 
 packages = """
 	dialog
-	elinks
-	gpm
-	htop
+	links
+	top
 	info
-	mc
-	most
-	screen
+	gnuit
+	less
+	tmux
 	unp
-	vim
+	nano
+	mpg123
 """
